@@ -1302,12 +1302,14 @@ body {
 .detail-image-double {
     display: flex;
     gap: 20px;
-    max-width: 500px;
+    max-width: 650px;
     margin-bottom: 30px;
 }
 
 .detail-image-double img {
-    width: 48%;
+    flex: 1;
+    width: 100%;
+    height: auto;
     border-radius: 16px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     transition: transform 0.6s ease;
