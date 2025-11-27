@@ -382,9 +382,9 @@ body {
     letter-spacing: 2px;
 }
 
-/* 론첼 메인 섹션 */
-.lonchel-main {
-    padding: 80px 0;
+/* 론첼 타이틀 섹션 */
+.lonchel-title-section {
+    padding: 60px 0 40px;
     background: #1a1a1a;
     color: #fff;
 }
@@ -394,39 +394,8 @@ body {
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: 3px;
-    margin-bottom: 60px;
     color: #fff;
-}
-
-.lonchel-nav {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.lonchel-nav-item {
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s;
-}
-
-.lonchel-nav-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-5px);
-}
-
-.lonchel-nav-title {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #fff;
+    margin: 0;
 }
 
 /* 다크 섹션 공통 스타일 */
@@ -816,10 +785,6 @@ body {
 
 /* 반응형 디자인 */
 @media (max-width: 1200px) {
-    .lonchel-nav {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .value-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -846,15 +811,6 @@ body {
 
     .lonchel-title {
         font-size: 2.5rem;
-    }
-
-    .lonchel-nav {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .lonchel-nav-item {
-        padding: 30px 20px;
     }
 
     .sitemap-content {
