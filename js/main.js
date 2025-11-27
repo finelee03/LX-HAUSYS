@@ -45,6 +45,19 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// 검색창 토글
+const searchToggle = document.querySelector('.search-toggle');
+const searchBar = document.querySelector('.search-bar');
+
+if (searchToggle && searchBar) {
+    searchToggle.addEventListener('click', () => {
+        searchBar.classList.toggle('active');
+        if (searchBar.classList.contains('active')) {
+            searchBar.querySelector('input').focus();
+        }
+    });
+}
+
 // 모바일 메뉴 토글
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav ul');

@@ -8,17 +8,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 상단 유틸리티 바 -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-links">
-                <a href="#">LX Z:IN 브랜드사이트</a>
-                <a href="#">고객서비스</a>
-                <a href="#">Global Network</a>
-            </div>
-        </div>
-    </div>
-
     <!-- 메인 헤더 -->
     <header class="main-header">
         <div class="container">
@@ -35,10 +24,28 @@
                         <li><a href="#">인재채용</a></li>
                     </ul>
                 </nav>
-                <button class="menu-toggle" aria-label="전체메뉴">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="header-actions">
+                    <button class="search-toggle" aria-label="검색">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="menu-toggle" aria-label="전체메뉴">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <!-- 검색창 (숨김 상태) -->
+            <div class="search-bar">
+                <input type="text" placeholder="검색어를 입력하세요" aria-label="검색">
+                <button type="button" class="search-submit">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
                 </button>
             </div>
         </div>
