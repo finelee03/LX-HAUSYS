@@ -884,8 +884,8 @@ body {
 
 .product-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1fr;
+    gap: 60px;
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
@@ -893,7 +893,7 @@ body {
 }
 
 .product-container.reverse {
-    direction: rtl;
+    direction: ltr;
 }
 
 .product-container.reverse > * {
@@ -1117,13 +1117,7 @@ body {
 /* 반응형 디자인 */
 @media (max-width: 1024px) {
     .product-container {
-        grid-template-columns: 1fr;
-        gap: 60px;
         padding: 0 40px;
-    }
-
-    .product-container.reverse {
-        direction: ltr;
     }
 
     .product-name {
