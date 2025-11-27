@@ -104,26 +104,20 @@ if (sitemapOverlay) {
 
 // 다크 섹션 감지하여 헤더 스타일 변경
 const header = document.querySelector('.main-header');
-const darkSections = document.querySelectorAll('.dark-section');
+const subNav = document.querySelector('.sub-nav');
 
 function checkHeaderPosition() {
-    const headerBottom = header.getBoundingClientRect().bottom;
-    let isDark = false;
+    // 서브 네비게이션의 위치를 기준으로 판단
+    if (subNav) {
+        const subNavTop = subNav.getBoundingClientRect().top;
+        const headerBottom = header.getBoundingClientRect().bottom;
 
-    darkSections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const sectionBottom = section.getBoundingClientRect().bottom;
-
-        // 헤더가 다크 섹션과 겹치는지 확인
-        if (sectionTop <= headerBottom && sectionBottom >= 0) {
-            isDark = true;
+        // 헤더가 서브 네비게이션(다크 섹션)과 겹치는지 확인
+        if (subNavTop <= headerBottom && subNavTop > 0) {
+            header.classList.add('dark');
+        } else {
+            header.classList.remove('dark');
         }
-    });
-
-    if (isDark) {
-        header.classList.add('dark');
-    } else {
-        header.classList.remove('dark');
     }
 }
 
