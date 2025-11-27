@@ -22,25 +22,40 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 서브 네비게이션 활성화
+// 서브 네비게이션 섹션 전환
 const subNavLinks = document.querySelectorAll('.sub-nav a');
-const sections = document.querySelectorAll('section[id]');
 
-window.addEventListener('scroll', () => {
-    let current = '';
+subNavLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
+        // 모든 링크에서 active 클래스 제거
+        subNavLinks.forEach(l => l.classList.remove('active'));
+
+        // 클릭된 링크에 active 클래스 추가
+        link.classList.add('active');
+
+        // 모든 섹션 콘텐츠 숨기기
+        const allContents = document.querySelectorAll('.section-content');
+        allContents.forEach(content => {
+            content.style.display = 'none';
+        });
+
+        // 선택된 섹션 콘텐츠 보여주기
+        const sectionName = link.getAttribute('data-section');
+        const targetContent = document.getElementById(sectionName + '-content');
+        if (targetContent) {
+            targetContent.style.display = 'block';
         }
-    });
 
-    subNavLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
+        // 서브 네비게이션 위치로 스크롤
+        const subNav = document.querySelector('.sub-nav');
+        if (subNav) {
+            const subNavTop = subNav.offsetTop;
+            window.scrollTo({
+                top: subNavTop - 100,
+                behavior: 'smooth'
+            });
         }
     });
 });
