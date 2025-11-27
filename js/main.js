@@ -105,6 +105,7 @@ if (sitemapOverlay) {
 // 다크 섹션 감지하여 헤더 스타일 변경
 const header = document.querySelector('.main-header');
 const subNav = document.querySelector('.sub-nav');
+let ticking = false;
 
 function checkHeaderPosition() {
     // 서브 네비게이션의 위치를 기준으로 판단
@@ -119,9 +120,17 @@ function checkHeaderPosition() {
             header.classList.remove('dark');
         }
     }
+    ticking = false;
 }
 
-window.addEventListener('scroll', checkHeaderPosition);
+function requestTick() {
+    if (!ticking) {
+        requestAnimationFrame(checkHeaderPosition);
+        ticking = true;
+    }
+}
+
+window.addEventListener('scroll', requestTick, { passive: true });
 window.addEventListener('load', checkHeaderPosition);
 
 // 제품 카드 애니메이션
