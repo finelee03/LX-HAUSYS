@@ -25,6 +25,43 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.main-header.dark {
+    background: #1a1a1a;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.main-header.dark .logo a {
+    color: #fff;
+}
+
+.main-header.dark .main-nav a {
+    color: #fff;
+}
+
+.main-header.dark .main-nav a::after {
+    background: #fff;
+}
+
+.main-header.dark .search-toggle,
+.main-header.dark .menu-toggle {
+    color: #fff;
+}
+
+.main-header.dark .menu-toggle span {
+    background: #fff;
+}
+
+.main-header.dark .search-bar {
+    border-top-color: #333;
+}
+
+.main-header.dark .search-bar input {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #fff;
 }
 
 .header-content {
@@ -169,6 +206,126 @@ body {
     transform: scale(1.05);
 }
 
+/* 사이트맵 오버레이 */
+.sitemap-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.sitemap-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sitemap-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.sitemap-overlay.active .sitemap-content {
+    transform: translateX(0);
+}
+
+.sitemap-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.sitemap-close:hover {
+    color: #c8102e;
+}
+
+.sitemap-inner {
+    padding: 80px 40px 40px;
+}
+
+.sitemap-header {
+    margin-bottom: 50px;
+}
+
+.sitemap-header h2 {
+    font-size: 2rem;
+    color: #c8102e;
+    margin-bottom: 30px;
+}
+
+.sitemap-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.sitemap-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.sitemap-links a:hover {
+    color: #c8102e;
+}
+
+.sitemap-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sitemap-column h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c8102e;
+}
+
+.sitemap-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sitemap-column li {
+    margin-bottom: 12px;
+}
+
+.sitemap-column a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.sitemap-column a:hover {
+    color: #c8102e;
+}
+
 /* 브레드크럼 */
 .breadcrumb {
     background: #f8f9fa;
@@ -225,6 +382,65 @@ body {
     letter-spacing: 2px;
 }
 
+/* 론첼 메인 섹션 */
+.lonchel-main {
+    padding: 80px 0;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.lonchel-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.lonchel-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lonchel-nav-item {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.lonchel-nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.lonchel-nav-title {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* 다크 섹션 공통 스타일 */
+.dark-section {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.dark-section h2,
+.dark-section h3,
+.dark-section p {
+    color: #fff;
+}
+
 /* 서브 네비게이션 */
 .sub-nav {
     background: #fff;
@@ -232,6 +448,21 @@ body {
     position: sticky;
     top: 70px;
     z-index: 999;
+}
+
+.sub-nav.dark-section {
+    background: #2a2a2a;
+    border-bottom-color: #444;
+}
+
+.sub-nav.dark-section a {
+    color: #ccc;
+}
+
+.sub-nav.dark-section a:hover,
+.sub-nav.dark-section a.active {
+    color: #fff;
+    border-bottom-color: #fff;
 }
 
 .sub-nav ul {
@@ -266,6 +497,28 @@ body {
 .brand-values {
     padding: 100px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.brand-values.dark-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.brand-values.dark-section .value-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-values.dark-section .value-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.brand-values.dark-section .value-item h3 {
+    color: #fff;
+}
+
+.brand-values.dark-section .value-item p {
+    color: #ccc;
 }
 
 .value-grid {
@@ -334,6 +587,35 @@ body {
 .product-lineup {
     padding: 100px 0;
     background: #f8f9fa;
+}
+
+.product-lineup.dark-section {
+    background: #1a1a1a;
+}
+
+.product-lineup.dark-section .product-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-lineup.dark-section .product-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.product-lineup.dark-section .product-info h3 {
+    color: #fff;
+}
+
+.product-lineup.dark-section .product-subtitle {
+    color: #999;
+}
+
+.product-lineup.dark-section .product-features li {
+    color: #ccc;
+}
+
+.product-lineup.dark-section .product-features li::before {
+    color: #fff;
 }
 
 .product-lineup h2 {
@@ -427,6 +709,11 @@ body {
     background: linear-gradient(135deg, #c8102e 0%, #a00c25 100%);
     text-align: center;
     color: #fff;
+}
+
+.inquiry-section.dark-section {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .inquiry-section h2 {
@@ -529,6 +816,10 @@ body {
 
 /* 반응형 디자인 */
 @media (max-width: 1200px) {
+    .lonchel-nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .value-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -551,6 +842,23 @@ body {
 
     .search-toggle {
         display: flex;
+    }
+
+    .lonchel-title {
+        font-size: 2.5rem;
+    }
+
+    .lonchel-nav {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .lonchel-nav-item {
+        padding: 30px 20px;
+    }
+
+    .sitemap-content {
+        max-width: 100%;
     }
 
     .hero-text h2 {

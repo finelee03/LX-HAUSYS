@@ -58,16 +58,62 @@ if (searchToggle && searchBar) {
     });
 }
 
-// 모바일 메뉴 토글
+// 사이트맵 메뉴 토글
 const menuToggle = document.querySelector('.menu-toggle');
-const mainNav = document.querySelector('.main-nav ul');
+const sitemapOverlay = document.querySelector('.sitemap-overlay');
+const sitemapClose = document.querySelector('.sitemap-close');
 
-if (menuToggle) {
+if (menuToggle && sitemapOverlay) {
     menuToggle.addEventListener('click', () => {
-        mainNav.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+        sitemapOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
 }
+
+if (sitemapClose) {
+    sitemapClose.addEventListener('click', () => {
+        sitemapOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+}
+
+// 오버레이 클릭 시 메뉴 닫기
+if (sitemapOverlay) {
+    sitemapOverlay.addEventListener('click', (e) => {
+        if (e.target === sitemapOverlay) {
+            sitemapOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// 다크 섹션 감지하여 헤더 스타일 변경
+const header = document.querySelector('.main-header');
+const darkSections = document.querySelectorAll('.dark-section');
+
+function checkHeaderPosition() {
+    const headerBottom = header.getBoundingClientRect().bottom;
+    let isDark = false;
+
+    darkSections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionBottom = section.getBoundingClientRect().bottom;
+
+        // 헤더가 다크 섹션과 겹치는지 확인
+        if (sectionTop <= headerBottom && sectionBottom >= 0) {
+            isDark = true;
+        }
+    });
+
+    if (isDark) {
+        header.classList.add('dark');
+    } else {
+        header.classList.remove('dark');
+    }
+}
+
+window.addEventListener('scroll', checkHeaderPosition);
+window.addEventListener('load', checkHeaderPosition);
 
 // 제품 카드 애니메이션
 const observerOptions = {
