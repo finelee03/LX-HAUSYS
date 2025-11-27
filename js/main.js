@@ -133,7 +133,7 @@ function requestTick() {
 window.addEventListener('scroll', requestTick, { passive: true });
 window.addEventListener('load', checkHeaderPosition);
 
-// 제품 카드 애니메이션
+// 제품 카드 및 디테일 아이템 애니메이션
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -142,8 +142,7 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('visible');
         }
     });
 }, observerOptions);
@@ -162,6 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
         item.style.opacity = '0';
         item.style.transform = 'translateY(30px)';
         item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(item);
+    });
+
+    // 디테일 아이템 스크롤 애니메이션
+    const detailItems = document.querySelectorAll('.detail-item');
+    detailItems.forEach(item => {
         observer.observe(item);
     });
 });
