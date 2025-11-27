@@ -414,8 +414,7 @@ body {
 .sub-nav {
     background: #fff;
     border-bottom: 1px solid #e9ecef;
-    position: sticky;
-    top: 70px;
+    position: relative;
     z-index: 999;
 }
 
