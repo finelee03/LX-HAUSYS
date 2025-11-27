@@ -1274,12 +1274,20 @@ body {
     padding-left: 10%;
 }
 
-/* Position Center-Right - 중앙에서 살짝 우측 */
-.detail-item.position-center-right {
+/* Position Right Offset - 우측에서 살짝 안쪽 */
+.detail-item.position-right-offset {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-left: 8%;
+    align-items: flex-end;
+    padding-right: 18%;
+}
+
+/* Position Left Offset - 좌측에서 살짝 안쪽 */
+.detail-item.position-left-offset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 18%;
 }
 
 /* Position Center - 완전 중앙 (W200용) */
@@ -1392,7 +1400,8 @@ body {
 
     .detail-item.position-right,
     .detail-item.position-left,
-    .detail-item.position-center-right {
+    .detail-item.position-right-offset,
+    .detail-item.position-left-offset {
         align-items: center;
         padding-left: 5%;
         padding-right: 5%;
