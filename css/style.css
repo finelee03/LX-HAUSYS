@@ -385,8 +385,8 @@ body {
 /* 론첼 타이틀 섹션 */
 .lonchel-title-section {
     padding: 60px 0 40px;
-    background: #1a1a1a;
-    color: #fff;
+    background: #fff;
+    color: #333;
 }
 
 .lonchel-title {
@@ -394,7 +394,7 @@ body {
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: 3px;
-    color: #fff;
+    color: #333;
     margin: 0;
 }
 
