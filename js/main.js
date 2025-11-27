@@ -110,11 +110,11 @@ let ticking = false;
 function checkHeaderPosition() {
     // 서브 네비게이션의 위치를 기준으로 판단
     if (subNav) {
-        const subNavTop = subNav.getBoundingClientRect().top;
-        const headerBottom = header.getBoundingClientRect().bottom;
+        const subNavRect = subNav.getBoundingClientRect();
+        const headerHeight = header.offsetHeight;
 
-        // 헤더가 서브 네비게이션(다크 섹션)과 겹치는지 확인
-        if (subNavTop <= headerBottom && subNavTop > 0) {
+        // 서브 네비게이션이 헤더 높이 이내에 있으면 다크모드
+        if (subNavRect.top <= headerHeight) {
             header.classList.add('dark');
         } else {
             header.classList.remove('dark');
