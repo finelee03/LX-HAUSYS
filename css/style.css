@@ -1377,8 +1377,8 @@ body {
 /* Detail Grid - 수평 배치 */
 .detail-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     max-width: 1400px;
     margin: 60px auto;
     padding: 0 60px;
