@@ -876,8 +876,7 @@ body {
 /* Apple 스타일 제품 섹션 */
 .product-section {
     min-height: 100vh;
-    display: flex;
-    align-items: center;
+    display: block;
     padding: 100px 0;
     position: relative;
 }
@@ -1377,7 +1376,7 @@ body {
 /* Detail Grid - 수평 배치 */
 .detail-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: 1400px;
     margin: 60px auto;
