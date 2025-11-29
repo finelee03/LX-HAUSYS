@@ -1431,7 +1431,7 @@ body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .product-name {
         font-size: 2.2rem;
     }
@@ -1440,10 +1440,14 @@ body {
         font-size: 0.85rem;
     }
 
+    .hero-image-container {
+        padding: 0 60px;
+    }
+
     .detail-grid {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 0 40px;
+        padding: 0 60px;
         margin: 40px auto;
     }
 
