@@ -364,7 +364,7 @@
                 </div>
             </div>
 
-            <div class="detail-grid" style="grid-template-columns: 1fr 2fr; max-width: 1080px; gap: 40px;">
+            <div class="detail-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 1080px; gap: 40px;">
                 <div class="detail-card">
                     <div class="detail-card-image">
                         <img src="images/W350_1.png" alt="W350 디테일">
@@ -376,10 +376,10 @@
                     </div>
                 </div>
 
-                <div class="detail-card">
-                    <div class="detail-card-image" style="display: flex; gap: 10px;">
-                        <img src="images/W350_2_1.png" alt="W350 디테일" style="flex: 1;">
-                        <img src="images/W350_2_2.png" alt="W350 디테일" style="flex: 1;">
+                <div class="detail-card" style="grid-column: span 2;">
+                    <div class="detail-card-image" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+                        <img src="images/W350_2_1.png" alt="W350 디테일" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="images/W350_2_2.png" alt="W350 디테일" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="detail-card-content">
                         <h3>심플함을 더한 차별화된 디자인</h3>
