@@ -1180,7 +1180,7 @@ body {
 .main-hero {
     width: 100%;
     margin-bottom: 40px;
-    padding: 40px 20px;
+    padding: 40px 0;
 }
 
 .main-hero .hero-text {
@@ -1438,10 +1438,6 @@ body {
 
     .product-tagline {
         font-size: 0.85rem;
-    }
-
-    .main-hero {
-        padding: 40px 0;
     }
 
     .detail-grid {
