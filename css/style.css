@@ -1445,6 +1445,7 @@ body {
         gap: 30px;
         padding: 0 20px;
         margin: 40px auto;
+        max-width: 100%;
     }
 
     .w350-dual-image {
