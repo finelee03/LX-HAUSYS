@@ -1195,11 +1195,10 @@ body {
 
 .hero-image-container {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.03);
+    padding: 0 60px;
+    box-sizing: border-box;
 }
 
 .hero-image-container img {
@@ -1207,6 +1206,8 @@ body {
     height: auto;
     display: block;
     object-fit: cover;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
 }
 
 /* Detail Showcase - Staggered Layout */
