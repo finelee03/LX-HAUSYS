@@ -1448,14 +1448,14 @@ body {
 
     .hero-image-container {
         max-width: 100%;
-        padding: 0 20px;
+        padding: 0 40px;
         margin: 0;
     }
 
     .detail-grid {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 0 20px;
+        padding: 0 40px;
         margin: 40px 0;
         max-width: 100%;
     }
