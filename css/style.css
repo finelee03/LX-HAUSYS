@@ -1440,8 +1440,12 @@ body {
         font-size: 0.85rem;
     }
 
+    .main-hero {
+        padding: 40px 0;
+    }
+
     .hero-image-container {
-        padding: 0;
+        padding: 0 20px;
     }
 
     .detail-grid {
