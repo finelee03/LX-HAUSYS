@@ -1195,7 +1195,7 @@ body {
 
 .hero-image-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 60px;
     box-sizing: border-box;
@@ -1366,7 +1366,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 40px auto;
     padding: 0 60px;
 }
