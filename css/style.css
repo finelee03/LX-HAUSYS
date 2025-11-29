@@ -1197,7 +1197,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     box-sizing: border-box;
 }
 
@@ -1368,7 +1368,7 @@ body {
     gap: 40px;
     max-width: 1200px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 0 40px;
     box-sizing: border-box;
 }
 
