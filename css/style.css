@@ -1440,6 +1440,10 @@ body {
         font-size: 0.85rem;
     }
 
+    .hero-image-container {
+        max-width: 100%;
+    }
+
     .detail-grid {
         grid-template-columns: 1fr;
         gap: 30px;
