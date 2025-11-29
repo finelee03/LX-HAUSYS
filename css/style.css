@@ -1199,7 +1199,6 @@ body {
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
-    min-height: 200px;
     background: rgba(255, 255, 255, 0.03);
 }
 
@@ -1207,6 +1206,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
 /* Detail Showcase - Staggered Layout */
@@ -1364,7 +1364,7 @@ body {
 .detail-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 40px;
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 60px;
