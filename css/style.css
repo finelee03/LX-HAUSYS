@@ -1424,6 +1424,11 @@ body {
     font-style: italic;
 }
 
+/* W350 Special Card Styling */
+.w350-dual-image {
+    aspect-ratio: 32/9 !important; /* 2배 너비 + gap을 고려한 비율 */
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     .product-name {
@@ -1439,6 +1444,10 @@ body {
         gap: 30px;
         padding: 0 40px;
         margin: 40px auto;
+    }
+
+    .w350-dual-image {
+        aspect-ratio: 16/9 !important; /* 모바일에서는 일반 비율 */
     }
 
     .detail-item.position-right,
