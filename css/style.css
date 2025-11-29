@@ -1183,9 +1183,14 @@ body {
     padding: 40px 20px;
 }
 
-.hero-text {
+.main-hero .hero-text {
+    position: static;
+    transform: none;
     text-align: center;
     margin-bottom: 30px;
+    width: auto;
+    padding: 0;
+    text-shadow: none;
 }
 
 .hero-image-container {
