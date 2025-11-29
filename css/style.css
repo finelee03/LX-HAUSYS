@@ -1198,8 +1198,9 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: 20px;
     min-height: 200px;
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .hero-image-container img {
