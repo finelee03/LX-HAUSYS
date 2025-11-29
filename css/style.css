@@ -1433,24 +1433,29 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .main-hero {
+        padding: 0;
+        margin-bottom: 60px;
+    }
+
     .product-name {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     .product-tagline {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     .hero-image-container {
         max-width: 100%;
-        padding: 0;
+        padding: 0 20px;
         margin: 0;
     }
 
     .detail-grid {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 0;
+        padding: 0 20px;
         margin: 40px 0;
         max-width: 100%;
     }
@@ -1474,25 +1479,6 @@ body {
 
     .detail-content h3 {
         font-size: 1.2rem;
-    }
-
-    .detail-content p {
-        font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .main-hero {
-        padding: 0;
-        margin-bottom: 60px;
-    }
-
-    .product-name {
-        font-size: 1.8rem;
-    }
-
-    .product-tagline {
-        font-size: 0.8rem;
     }
 
     .detail-item {
