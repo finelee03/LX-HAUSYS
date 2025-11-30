@@ -1568,4 +1568,45 @@ body {
     .detail-content p {
         font-size: 0.8rem;
     }
+
+    .side-index {
+        display: none;
+    }
+}
+
+/* 사이드 인덱스 네비게이션 */
+.side-index {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 16px 12px;
+    border-radius: 12px;
+}
+
+.side-index-item {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.side-index-item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.side-index-item.active {
+    color: #ffffff;
+    background: rgba(200, 16, 46, 0.8);
 }

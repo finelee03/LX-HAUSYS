@@ -180,3 +180,32 @@ if (inquiryBtn) {
 }
 
 console.log('LX Hausys LONCHEL Website Loaded');
+
+// 사이드 인덱스 스크롤 활성화
+const sideIndexItems = document.querySelectorAll('.side-index-item');
+const productSections = document.querySelectorAll('.product-section');
+
+function updateSideIndex() {
+    let currentSection = '';
+
+    productSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        const sectionTop = rect.top;
+        const sectionHeight = rect.height;
+
+        // 섹션이 뷰포트 상단 근처에 있을 때 활성화
+        if (sectionTop <= 200 && sectionTop + sectionHeight > 200) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    sideIndexItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === '#' + currentSection) {
+            item.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', updateSideIndex, { passive: true });
+window.addEventListener('load', updateSideIndex);
