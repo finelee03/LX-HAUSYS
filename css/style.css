@@ -328,7 +328,7 @@ body {
 
 /* 브레드크럼 */
 .breadcrumb {
-    background: #f8f9fa;
+    background: #fff;
     padding: 15px 0;
     font-size: 0.9rem;
     color: #666;
