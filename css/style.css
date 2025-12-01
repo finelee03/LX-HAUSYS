@@ -1580,7 +1580,7 @@ body {
     position: fixed;
     right: 30px;
     top: 120px;
-    width: 80px;
+    width: 90px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -1617,7 +1617,7 @@ body {
 }
 
 .side-index-toggle.active {
-    width: 80px;
+    width: 90px;
     height: 12px;
     border-radius: 6px 6px 0 0;
     background: rgba(255, 255, 255, 0.2);
@@ -1647,6 +1647,7 @@ body {
     border-radius: 6px;
     transition: all 0.3s ease;
     text-align: center;
+    white-space: nowrap;
 }
 
 .side-index-item:hover {
