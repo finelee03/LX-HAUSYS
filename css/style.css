@@ -1615,6 +1615,12 @@ body {
     transition: all 0.3s ease;
 }
 
+.side-index-toggle.active {
+    top: 108px;
+    height: 12px;
+    border-radius: 6px 6px 0 0;
+}
+
 .side-index-toggle:hover {
     background: rgba(0, 0, 0, 0.8);
 }
@@ -1623,6 +1629,11 @@ body {
     width: 20px;
     height: 20px;
     stroke: rgba(255, 255, 255, 0.7);
+    transition: opacity 0.3s ease;
+}
+
+.side-index-toggle.active svg {
+    opacity: 0;
 }
 
 .side-index-item {

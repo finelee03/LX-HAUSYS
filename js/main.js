@@ -217,12 +217,14 @@ const sideIndex = document.querySelector('.side-index');
 if (sideIndexToggle && sideIndex) {
     sideIndexToggle.addEventListener('click', () => {
         sideIndex.classList.toggle('active');
+        sideIndexToggle.classList.toggle('active');
     });
 
     // 인덱스 항목 클릭 시 인덱스 닫기
     sideIndexItems.forEach(item => {
         item.addEventListener('click', () => {
             sideIndex.classList.remove('active');
+            sideIndexToggle.classList.remove('active');
         });
     });
 
@@ -230,6 +232,7 @@ if (sideIndexToggle && sideIndex) {
     document.addEventListener('click', (e) => {
         if (!sideIndex.contains(e.target) && !sideIndexToggle.contains(e.target)) {
             sideIndex.classList.remove('active');
+            sideIndexToggle.classList.remove('active');
         }
     });
 }
