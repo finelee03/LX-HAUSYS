@@ -904,10 +904,10 @@ body {
     font-size: 4rem;
     font-weight: 900;
     margin-bottom: 15px;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.1em;
     line-height: 1.1;
     color: #ffffff;
-    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-stroke: 1.5px #ffffff;
 }
 
 .product-tagline {
