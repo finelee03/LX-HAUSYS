@@ -1585,7 +1585,7 @@ body {
 /* 사이드 인덱스 네비게이션 */
 .side-index {
     position: fixed;
-    right: 30px;
+    right: 0;
     top: 120px;
     width: 90px;
     display: flex;
@@ -1595,7 +1595,7 @@ body {
     background: rgba(50, 50, 50, 0.7);
     backdrop-filter: blur(10px);
     padding: 24px 12px 16px 12px;
-    border-radius: 12px;
+    border-radius: 12px 0 0 12px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -1608,13 +1608,13 @@ body {
 
 .side-index-toggle {
     position: fixed;
-    right: 30px;
+    right: 0;
     top: 120px;
     width: 40px;
     height: 40px;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1626,7 +1626,7 @@ body {
 .side-index-toggle.active {
     width: 90px;
     height: 12px;
-    border-radius: 6px 6px 0 0;
+    border-radius: 6px 0 0 0;
     background: rgba(255, 255, 255, 0.2);
 }
 
