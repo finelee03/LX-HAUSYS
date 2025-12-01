@@ -1579,8 +1579,7 @@ body {
 .side-index {
     position: fixed;
     right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 120px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -1590,18 +1589,19 @@ body {
     padding: 16px 12px;
     border-radius: 12px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.side-index:hover {
+.side-index.active {
     opacity: 1;
+    visibility: visible;
 }
 
 .side-index-toggle {
     position: fixed;
     right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 120px;
     width: 40px;
     height: 40px;
     background: rgba(0, 0, 0, 0.6);
@@ -1611,17 +1611,12 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 999;
-    transition: opacity 0.3s ease;
+    z-index: 1001;
+    transition: all 0.3s ease;
 }
 
 .side-index-toggle:hover {
-    opacity: 0;
-}
-
-.side-index-toggle:hover + .side-index,
-.side-index:hover {
-    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .side-index-toggle svg {

@@ -209,3 +209,27 @@ function updateSideIndex() {
 
 window.addEventListener('scroll', updateSideIndex, { passive: true });
 window.addEventListener('load', updateSideIndex);
+
+// 사이드 인덱스 토글 클릭
+const sideIndexToggle = document.querySelector('.side-index-toggle');
+const sideIndex = document.querySelector('.side-index');
+
+if (sideIndexToggle && sideIndex) {
+    sideIndexToggle.addEventListener('click', () => {
+        sideIndex.classList.toggle('active');
+    });
+
+    // 인덱스 항목 클릭 시 인덱스 닫기
+    sideIndexItems.forEach(item => {
+        item.addEventListener('click', () => {
+            sideIndex.classList.remove('active');
+        });
+    });
+
+    // 인덱스 외부 클릭 시 닫기
+    document.addEventListener('click', (e) => {
+        if (!sideIndex.contains(e.target) && !sideIndexToggle.contains(e.target)) {
+            sideIndex.classList.remove('active');
+        }
+    });
+}
