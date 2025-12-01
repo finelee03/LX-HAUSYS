@@ -1580,13 +1580,14 @@ body {
     position: fixed;
     right: 30px;
     top: 120px;
+    width: 80px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     z-index: 1000;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
-    padding: 16px 12px;
+    padding: 24px 12px 16px 12px;
     border-radius: 12px;
     opacity: 0;
     visibility: hidden;
@@ -1616,7 +1617,7 @@ body {
 }
 
 .side-index-toggle.active {
-    top: 108px;
+    width: 80px;
     height: 12px;
     border-radius: 6px 6px 0 0;
 }
