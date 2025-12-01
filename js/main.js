@@ -219,20 +219,4 @@ if (sideIndexToggle && sideIndex) {
         sideIndex.classList.toggle('active');
         sideIndexToggle.classList.toggle('active');
     });
-
-    // 인덱스 항목 클릭 시 인덱스 닫기
-    sideIndexItems.forEach(item => {
-        item.addEventListener('click', () => {
-            sideIndex.classList.remove('active');
-            sideIndexToggle.classList.remove('active');
-        });
-    });
-
-    // 인덱스 외부 클릭 시 닫기
-    document.addEventListener('click', (e) => {
-        if (!sideIndex.contains(e.target) && !sideIndexToggle.contains(e.target)) {
-            sideIndex.classList.remove('active');
-            sideIndexToggle.classList.remove('active');
-        }
-    });
 }
